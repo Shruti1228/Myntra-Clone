@@ -14,7 +14,7 @@ struct Signup: View {
                 HStack{
                     SearchTextField(searchText: .constant(""), placeholder: "Search ")
                         .padding(.horizontal, 20)
-                    
+                 // helloww
                 }
             }
         }

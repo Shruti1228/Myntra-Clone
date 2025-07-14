@@ -1,48 +1,41 @@
+
 import SwiftUI
 
 struct SearchTextField: View {
-    @Binding var searchText: String
+    @State var searchText: String
     var placeholder: String = "Search"
-    
     var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: "magnifyingglass")
-                .font(.system(size: 22))
-                .foregroundColor(.black)
+        
+        VStack{
+                RoundedRectangle(cornerRadius:15)
+                    .stroke(Color.black.opacity(0.4))
+                    .frame(width: .infinity, height: 50)
             
-            TextField(placeholder, text: $searchText)
-                .foregroundColor(.black)
-                .autocorrectionDisabled()
-                .autocapitalization(.none)
-            
-            if !searchText.isEmpty {
-                Button {
-                    searchText = ""
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.system(size: 16))
-                        .foregroundColor(.gray)
-                }
-            }
+                    .overlay{
+                        HStack{
+                
+                            Image("myntralogo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width:50, height:50)
+                                .padding(.leading)
+                            
+                            TextField(placeholder, text: $searchText)
+                                .font(.system(size: 20))
+                                .autocapitalization(.none)
+                                .autocorrectionDisabled()
+                            
+                            Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:20, height:20)
+                            .padding(.trailing)
+                        }
+                    }
         }
-        .padding(.horizontal, 15)
-        .padding(.vertical, 12)
-        .background(
-            RoundedRectangle(cornerRadius: 15)
-                .fill(Color.gray.opacity(0.1))
-        )
     }
 }
 
-// Usage Example:
-struct SearchTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            SearchTextField(searchText: .constant(""))
-                .padding()
-            
-//            SearchTextField(searchText: .constant("Test"), placeholder: "Search products")
-//                .padding()
-        }
-    }
+#Preview {
+    SearchTextField(searchText: "", placeholder: "Search")
 }

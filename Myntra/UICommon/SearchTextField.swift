@@ -17,7 +17,7 @@ struct SearchTextField: View {
                             Image("myntralogo")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width:50, height:50)
+                                .frame(width:45, height:45)
                                 .padding(.leading)
                             
                             TextField(placeholder, text: $searchText)

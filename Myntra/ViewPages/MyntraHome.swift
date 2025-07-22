@@ -52,6 +52,33 @@ struct MyntraHome: View {
                         .padding(.top,10)
                         
                         Divider()
+                        
+                        
+                            HStack{
+                                Image("imageee")
+                                    .resizable()
+                                    .scaledToFit()
+//                                    .frame(width:80, height:80)
+                                
+                                Image("tablelamp")
+                                    .resizable()
+                                    .scaledToFit()
+//                                    .frame(width:80, height:80)
+                                
+                                Image("tablelamp")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:90, height:90)
+                                
+                                Image("tablelamp")
+                                    .resizable()
+                                    .scaledToFit()
+//                                    .frame(width:80, height:80)
+                                
+                              
+                                
+                            
+                        }
                     }
                 }
                 .padding(.horizontal)

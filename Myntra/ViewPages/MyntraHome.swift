@@ -28,6 +28,7 @@ struct MyntraHome: View {
                             .scaledToFit()
                             .frame(width:28, height:28)
                     }
+                    .padding(.horizontal)
                     
                     ScrollView{
                         HStack{
@@ -50,38 +51,56 @@ struct MyntraHome: View {
                                 .font(.system(size:20, weight: .medium))
                         }
                         .padding(.top,10)
+                        .padding(.horizontal)
                         
                         Divider()
                         
-                        
+                        ScrollView{
                             HStack{
-                                Image("imageee")
-                                    .resizable()
-                                    .scaledToFit()
-//                                    .frame(width:80, height:80)
+                                VStack{
+                                    Image("2582169")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Fashion")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Image("tablelamp")
-                                    .resizable()
-                                    .scaledToFit()
-//                                    .frame(width:80, height:80)
+                                VStack{
+                                    Image("sofa")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Furniture")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Image("tablelamp")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:90, height:90)
+                                VStack{
+                                    Image("sofaa")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Fashion")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Image("tablelamp")
-                                    .resizable()
-                                    .scaledToFit()
-//                                    .frame(width:80, height:80)
-                                
-                              
-                                
-                            
+                                VStack{
+                                    Image("tablelamp")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Decore")
+                                        .font(.system(size:15, weight: .medium))
+                                }
+                            }
                         }
                     }
                 }
-                .padding(.horizontal)
+//
             }
         }
     }

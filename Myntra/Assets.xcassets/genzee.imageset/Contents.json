@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "a-generation-of-trendsetters-gen-zs-beauty-must-haves-large.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -9,19 +9,17 @@ struct MyntraHome: View {
                     HStack{
                         SearchTextField(searchText: "", placeholder: "Search")
                         
+                        Spacer()
+                        
                         Image("shopping")
                             .resizable()
                             .scaledToFit()
                             .frame(width:28, height:28)
                         
-                        Spacer()
-                        
                         Image("heart")
                             .resizable()
                             .scaledToFit()
                             .frame(width:28, height:28)
-                        
-                        Spacer()
                         
                         Image("user")
                             .resizable()
@@ -29,7 +27,6 @@ struct MyntraHome: View {
                             .frame(width:28, height:28)
                     }
                     
-                    ScrollView{
                         HStack{
                             Text("All")
                                 .font(.system(size:20, weight: .medium))
@@ -51,83 +48,107 @@ struct MyntraHome: View {
                             
                         }
                         .padding(.top)
-                    }
                     
-                    Divider()
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack{
-                            VStack{
-                                Image("2582169")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:85, height:85)
+                    ScrollView{
+                        
+                        Divider()
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack{
+                                VStack{
+                                    Image("2582169")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Fashion")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Text("Fashion")
-                                    .font(.system(size:15, weight: .medium))
-                            }
-                            
-                            VStack{
-                                Image("P0")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:85, height:85)
+                                VStack{
+                                    Image("P0")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Footwear")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Text("Footwear")
-                                    .font(.system(size:15, weight: .medium))
-                            }
-                            
-                            VStack{
-                                Image("sofa")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:85, height:85)
+                                VStack{
+                                    Image("sofa")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Furniture")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Text("Furniture")
-                                    .font(.system(size:15, weight: .medium))
-                            }
-                            
-                            VStack{
-                                Image("beauty products")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:85, height:85)
+                                VStack{
+                                    Image("beauty products")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Cosmatic")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Text("Cosmatic")
-                                    .font(.system(size:15, weight: .medium))
-                            }
-                            
-                            VStack{
-                                Image("tablelamp")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:85, height:85)
+                                VStack{
+                                    Image("tablelamp")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Decore")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                                 
-                                Text("Decore")
-                                    .font(.system(size:15, weight: .medium))
-                            }
-
-                            VStack{
-                                Image("stationary")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width:85, height:85)
-                                
-                                Text("Stationary")
-                                    .font(.system(size:15, weight: .medium))
+                                VStack{
+                                    Image("stationary")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width:85, height:85)
+                                    
+                                    Text("Stationary")
+                                        .font(.system(size:15, weight: .medium))
+                                }
                             }
                         }
                         
+                        Image("discount")
+                            .resizable()
+                            .scaledToFit()
+                            
+                        
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack{
+                                Image("puma")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:180, height:120)
+        
+                                Image("zara")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:180, height:120)
+                                
+                                Image("h&m")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:180, height:120)
+                            }
+                            .padding(.top,)
+                        }
                     }
-                    
-//                    start
                 }
                 .padding(.horizontal)
             }
         }
     }
 }
-
 
 #Preview {
     MyntraHome()

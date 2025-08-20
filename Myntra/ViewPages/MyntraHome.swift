@@ -2,6 +2,10 @@
 import SwiftUI
 
 struct MyntraHome: View {
+
+let slideshowImages = ["coupon 3", "discount 2"]
+@State private var slideshowIndex = 0
+let slideshowTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationStack{
             ZStack{
@@ -48,6 +52,8 @@ struct MyntraHome: View {
                             
                         }
                         .padding(.top)
+                        .padding(.trailing,10)
+                        .padding(.leading,10)
                     
                     ScrollView{
                         
@@ -116,13 +122,25 @@ struct MyntraHome: View {
                                 }
                             }
                         }
-                        
-                        Image("discount")
-                            .resizable()
-                            .scaledToFit()
-                            
-                        
-                        
+
+                        TabView(selection: $slideshowIndex) {
+                           ForEach(slideshowImages.indices, id: \.self) { index in
+                                Image(slideshowImages[index])
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 150)
+                                    .tag(index)
+                                     }
+                                }
+                               .tabViewStyle(PageTabViewStyle())
+                               .frame(height: 130)
+                               .padding(.top,3)
+                               .onReceive(slideshowTimer) { _ in
+                                withAnimation {
+                       slideshowIndex = (slideshowIndex + 1) % slideshowImages.count
+                                  }
+                           }
+                    
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack{
                                 Image("puma")
@@ -135,12 +153,18 @@ struct MyntraHome: View {
                                     .scaledToFit()
                                     .frame(width:180, height:120)
                                 
+                                Image("louis-vuitton")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:150, height:120)
+                                
                                 Image("h&m")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width:180, height:120)
+                        
                             }
-                            .padding(.top,)
+                            .padding(.top,6)
                         }
                     }
                 }
